@@ -42,6 +42,70 @@ td {
 }
 
 .one {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.two {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.three {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.four {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.five {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.six {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.seven {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.eight {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.one-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -50,7 +114,7 @@ td {
 	animation: turn 1s;
 }
 
-.two {
+.two-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -59,7 +123,7 @@ td {
 	animation: turn 1s;
 }
 
-.three {
+.three-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -68,7 +132,7 @@ td {
 	animation: turn 1s;
 }
 
-.four {
+.four-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -77,7 +141,7 @@ td {
 	animation: turn 1s;
 }
 
-.five {
+.five-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -86,7 +150,7 @@ td {
 	animation: turn 1s;
 }
 
-.six {
+.six-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -95,7 +159,7 @@ td {
 	animation: turn 1s;
 }
 
-.seven {
+.seven-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
@@ -104,87 +168,13 @@ td {
 	animation: turn 1s;
 }
 
-.eight {
+.eight-turn {
 	-webkit-transform: rotateY(0deg);
 	-moz-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
 	background-image: url(../img/winking-big.png);
 	transition: transform 1s ease;
 	animation: turn 1s;
-}
-
-@keyframes turn {
-	0% {
-		background-image: none;
-	}
-
-	100% {
-		background-image;
-	}
-}
-
-.one-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.two-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.three-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.four-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.five-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.six-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.seven-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
-}
-
-.eight-unturn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	transition: transform 1s ease;
-	animation: unturn 0.2s;
 }
 
 @keyframes unturn {
@@ -194,5 +184,15 @@ td {
 
 	100% {
 		background-image: none;
+	}
+}
+
+@keyframes turn {
+	0% {
+		background-image: none;
+	}
+
+	100% {
+		background-image;
 	}
 }
