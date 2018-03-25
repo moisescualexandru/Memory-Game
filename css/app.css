@@ -39,3 +39,10 @@ td {
 	border-radius: 10px;
 	margin: 20px;
 }
+
+.turn {
+	-webkit-transform: rotateY(180deg);
+	-moz-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	transition: transform 1s ease;
+}
