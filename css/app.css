@@ -4,6 +4,25 @@ body {
 	text-align: center;
 }
 
+h1{
+
+}
+
+h2 {
+
+}
+
+#grid-perf {
+	width: 770px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+#stars, #moves, #timer {
+	width: 33%;
+}
+
 table {
 	background-color: cyan;
 	text-align: center;
