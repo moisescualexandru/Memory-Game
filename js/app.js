@@ -2,8 +2,27 @@
 
 function turnCard(event) {
 	let card = event.target.className;
-	event.target.classList.toggle (card);
-	event.target.classList.toggle (card+'-turn');
+	let valueOfIndex, ok;
+	for (let i = 0; i<classes.length; i++){
+		let intermediar = classes[i]+'-turn';
+		if (intermediar == card) {
+			ok=1;
+			valueOfIndex = classes[i];
+			break;
+		}
+	 	else if (card == classes[i]){
+			ok=2;
+			break;
+		}
+	}
+	if (ok==1) {
+		event.target.classList.remove (card);
+		event.target.classList.add (valueOfIndex);
+	}
+	else if (ok==2) {
+		event.target.classList.remove (card);
+		event.target.classList.add (card+'-turn');
+	}
 }
 
 //randomising the classes

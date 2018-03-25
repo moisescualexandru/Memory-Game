@@ -46,7 +46,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .two {
@@ -54,7 +54,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .three {
@@ -62,7 +62,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .four {
@@ -70,7 +70,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .five {
@@ -78,7 +78,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .six {
@@ -86,7 +86,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .seven {
@@ -94,7 +94,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .eight {
@@ -102,7 +102,7 @@ td {
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	transition: transform 1s ease;
-	animation: unturn 0.2s;
+	animation: unturn 1s;
 }
 
 .one-turn {
