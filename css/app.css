@@ -38,11 +38,161 @@ td {
 	border: 1px solid black;
 	border-radius: 10px;
 	margin: 20px;
+	background-color: blue;
 }
 
-.turn {
-	-webkit-transform: rotateY(180deg);
-	-moz-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+.one {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/angry-big.png);
 	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.two {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/in-love-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.three {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/sad-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.four {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/smiley-face-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.five {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/smiley-tongue-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.six {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/straight-face-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.seven {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/sun-glases-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+.eight {
+	-webkit-transform: rotateY(0deg);
+	-moz-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-image: url(../img/winking-big.png);
+	transition: transform 1s ease;
+	animation: turn 1s;
+}
+
+@keyframes turn {
+	0% {
+		background-image: none;
+	}
+
+	100% {
+		background-image;
+	}
+}
+
+.one-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.two-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.three-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.four-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.five-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.six-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.seven-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+.eight-unturn {
+	-webkit-transform: rotateY(-180deg);
+	-moz-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	transition: transform 1s ease;
+	animation: unturn 0.2s;
+}
+
+@keyframes unturn {
+	0% {
+		background-image;
+	}
+
+	100% {
+		background-image: none;
+	}
 }
