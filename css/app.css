@@ -12,6 +12,8 @@ h2 {
 
 }
 
+/*performance gauge*/
+
 #grid-perf {
 	width: 770px;
 	display: flex;
@@ -22,6 +24,8 @@ h2 {
 #stars, #moves, #timer {
 	width: 33%;
 }
+
+/*grid*/
 
 table {
 	background-color: cyan;
@@ -41,12 +45,15 @@ td {
 	background-color: blue;
 }
 
+/*cards*/
+
 .one {
 	-webkit-transform: rotateY(-180deg);
 	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	transition: transform 1s ease;
 }
 
 .two {
@@ -104,6 +111,8 @@ td {
 	transition: transform 1s ease;
 	animation: unturn 1s;
 }
+
+/*cards turned*/
 
 .one-turn {
 	-webkit-transform: rotateY(0deg);
@@ -176,6 +185,8 @@ td {
 	transition: transform 1s ease;
 	animation: turn 1s;
 }
+
+/*card turning and unturning animations*/
 
 @keyframes unturn {
 	0% {

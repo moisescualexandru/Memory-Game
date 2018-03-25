@@ -3,6 +3,7 @@
 function turnCard(event) {
 	let card = event.target.className;
 	let valueOfIndex, ok;
+	counter++;
 	for (let i = 0; i<classes.length; i++){
 		let intermediar = classes[i]+'-turn';
 		if (intermediar == card) {
@@ -22,6 +23,34 @@ function turnCard(event) {
 	else if (ok==2) {
 		event.target.classList.remove (card);
 		event.target.classList.add (card+'-turn');
+	}
+
+//verifying if the cards match
+
+	if (counter == 1) {
+		firstCard = card;
+	}
+
+	else if (counter == 2) {
+		counter = 0;
+		secondCard = card;
+		if (firstCard == secondCard) {
+			counterFinish += 2;
+			if (counterFinish == 16) {
+
+			}
+			let turnedCards = query.SelectorAll ('.'+firstCard);
+			for (let el of tunedCards) {
+				el.classList.remove (firstCard);
+				el.classList.add (firstCard+'matched');
+			}
+		}
+		else {
+			querySelector('.'+firstCard).classList.remove (firstCard);
+			querySelector('.'+firstCard).classList.add (firstCard.substring(0,str.indexOf('-'));
+			querySelector('.'+secondCard).classList.remove (secondCard);
+			querySelector('.'+secondCard).classList.add (secondCard.substring(0,str.indexOf('-'));
+		}
 	}
 }
 
@@ -52,4 +81,5 @@ for (let element of cards) {
 //adding event listener
 const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
-
+let counter = 0, counterFinish = 0;
+let firstCard, secondCard;
