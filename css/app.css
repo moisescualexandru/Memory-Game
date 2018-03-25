@@ -1,0 +1,22 @@
+body {
+	max-width: 1280px;
+	max-height: 1024px;
+	text-align: center;
+}
+
+table {
+	background-color: cyan;
+	text-align: center;
+	margin: 0 auto;
+	padding: 15px;
+	border-spacing: 15px;
+	border-radius: 20px;
+}
+
+td {
+	width: 170px;
+	height: 170px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 20px;
+}
