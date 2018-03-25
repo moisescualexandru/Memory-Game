@@ -2,14 +2,13 @@
 
 function turnCard(event) {
 	let card = event.target.className;
-	
-	// event.target.classList.toggle ('unturn');
-	// event.target.classList.toggle ('turn');
+	event.target.classList.toggle (card);
+	event.target.classList.toggle (card+'-turn');
 }
 
 //randomising the classes
 
-let classes = ['one-unturn', 'two-unturn', 'three-unturn', 'four-unturn','five-unturn', 'six-unturn', 'seven-unturn', 'eight-unturn','one-unturn', 'two-unturn', 'three-unturn', 'four-unturn','five-unturn', 'six-unturn', 'seven-unturn', 'eight-unturn'];
+let classes = ['one', 'two', 'three', 'four','five', 'six', 'seven', 'eight','one', 'two', 'three', 'four','five', 'six', 'seven', 'eight'];
 
 function shuffle(input) {
 	for (let i = input.length-1; i > 0; i--){
