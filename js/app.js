@@ -4,11 +4,7 @@ function turnCard(event) {
 	let card = event.target.className;
 	let valueOfIndex, ok;
 	counter++;
-	if (counter == 1) {
-    	firstCard = card;
-	} else if (counter == 2) {
-		secondCard = card;
-	}
+
 	for (let i = 0; i<classes.length; i++){
 		let intermediar = classes[i]+'-turn';
 		if (intermediar == card) {
@@ -29,6 +25,13 @@ function turnCard(event) {
 		event.target.classList.remove (card);
 		event.target.classList.add (card+'-turn');
 	}
+
+	if (counter == 1) {
+    	firstCard = card;
+	} else if (counter == 2) {
+		secondCard = card;
+		setTimeout (matchCards,1500);
+	}
 }
 
 //randomising the classes
@@ -46,6 +49,22 @@ function shuffle(input) {
 }
 shuffle(classes);
 
+//verifying if the cards match
+
+function matchCards () {
+    counter = 0;
+    if (firstCard == secondCard ) {
+        let turnedCard = document.getElementsByClassName(firstCard);
+    } else {
+        let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
+        let turnedCard2 = document.querySelector("."+secondCard+"-turn");
+		turnedCard1.classList.add(firstCard);
+		turnedCard2.classList.add(secondCard);
+		turnedCard1.classList.remove(firstCard+"-turn");
+		turnedCard2.classList.remove(secondCard+"-turn"); 
+    }
+}
+
 //adding random classes to the cards
 
 const cards = document.querySelectorAll ('td');
@@ -60,22 +79,3 @@ const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
 let counter = 0, counterFinish = 0;
 let firstCard, secondCard;
-
-//verifying if the cards match
-
-
-
-else if (counter == 2) {
-    counter = 0;
-    secondCard = card;
-    if (firstCard == secondCard ) {
-        let turnedCard = document.getElementsByClassName(firstCard);
-    } else {
-        let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
-        let turnedCard2 = document.querySelector("."+secondCard+"-turn");
-		turnedCard1.classList.add(firstCard);
-		turnedCard2.classList.add(secondCard);
-		turnedCard1.classList.remove(firstCard+"-turn");
-		turnedCard2.classList.remove(secondCard+"-turn"); 
-    }
-}
