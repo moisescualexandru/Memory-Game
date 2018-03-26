@@ -4,6 +4,11 @@ function turnCard(event) {
 	let card = event.target.className;
 	let valueOfIndex, ok;
 	counter++;
+	if (counter == 1) {
+    	firstCard = card;
+	} else if (counter == 2) {
+		secondCard = card;
+	}
 	for (let i = 0; i<classes.length; i++){
 		let intermediar = classes[i]+'-turn';
 		if (intermediar == card) {
@@ -23,34 +28,6 @@ function turnCard(event) {
 	else if (ok==2) {
 		event.target.classList.remove (card);
 		event.target.classList.add (card+'-turn');
-	}
-
-//verifying if the cards match
-
-	if (counter == 1) {
-		firstCard = card;
-	}
-
-	else if (counter == 2) {
-		counter = 0;
-		secondCard = card;
-		if (firstCard == secondCard) {
-			counterFinish += 2;
-			if (counterFinish == 16) {
-
-			}
-			let turnedCards = query.SelectorAll ('.'+firstCard);
-			for (let el of tunedCards) {
-				el.classList.remove (firstCard);
-				el.classList.add (firstCard+'matched');
-			}
-		}
-		else {
-			querySelector('.'+firstCard).classList.remove (firstCard);
-			querySelector('.'+firstCard).classList.add (firstCard.substring(0,str.indexOf('-'));
-			querySelector('.'+secondCard).classList.remove (secondCard);
-			querySelector('.'+secondCard).classList.add (secondCard.substring(0,str.indexOf('-'));
-		}
 	}
 }
 
@@ -83,3 +60,22 @@ const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
 let counter = 0, counterFinish = 0;
 let firstCard, secondCard;
+
+//verifying if the cards match
+
+
+
+else if (counter == 2) {
+    counter = 0;
+    secondCard = card;
+    if (firstCard == secondCard ) {
+        let turnedCard = document.getElementsByClassName(firstCard);
+    } else {
+        let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
+        let turnedCard2 = document.querySelector("."+secondCard+"-turn");
+		turnedCard1.classList.add(firstCard);
+		turnedCard2.classList.add(secondCard);
+		turnedCard1.classList.remove(firstCard+"-turn");
+		turnedCard2.classList.remove(secondCard+"-turn"); 
+    }
+}
