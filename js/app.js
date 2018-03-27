@@ -124,7 +124,7 @@ function startGame () {
 	timer();
 }
 
-//reset grid function
+//reset button function
 
 function resetGrid () {
 	removeClasses();
@@ -169,7 +169,7 @@ function timer() {
 	},1000);
 }
 
-//adding event listener
+//adding event listener and declaring the global scope variables
 
 const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
