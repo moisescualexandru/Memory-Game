@@ -1,38 +1,49 @@
 // selecting and turning the card
 
 function turnCard(event) {
-	let card = event.target.className;
-	let valueOfIndex, ok;
-	counter++;
-
-	for (let i = 0; i<classes.length; i++){
-		let intermediar = classes[i]+'-turn';
-		if (intermediar == card) {
-			ok=1;
-			valueOfIndex = classes[i];
-			break;
+	if (event.target.tagName == 'TD') { //check if the event is a grid element
+		let card = event.target.className;
+		let valueOfIndex, ok;
+		counter++;
+		for (let i = 0; i<classes.length; i++) { //lopp through the classes to see if the card is already turned
+			let intermediar = classes[i]+'-turn';
+			if (intermediar == card) {
+				ok=1;
+				valueOfIndex = classes[i];
+				break;
+			}
+		 	else if (card == classes[i]){
+				ok=2;
+				break;
+			}
 		}
-	 	else if (card == classes[i]){
-			ok=2;
-			break;
+		if (ok==1) {	// if the first card was already turned and clicked again, it unterns it and resets the counter
+			counter=0;
+			event.target.classList.remove (card);
+			event.target.classList.add (valueOfIndex);
+			return;
 		}
-	}
-	if (ok==1) {
-		counter--;
-		event.target.classList.remove (card);
-		event.target.classList.add (valueOfIndex);
-	}
-	else if (ok==2) {
-		event.target.classList.remove (card);
-		event.target.classList.add (card+'-turn');
+		else if (ok==2) { //if the card was not turned, it turns the card
+			event.target.classList.remove (card);
+			event.target.classList.add (card+'-turn');
+		}
+
+		if (counter == 1) { //if only one card is turned, getting the className for the matching function
+	    	firstCard = card;
+		} else if (counter == 2) { //two cards turned, checking if they match and calling the functions
+			secondCard = card;
+			if (firstCard == secondCard) {
+				setTimeout (matchCards,0);
+			}
+			else {
+				setTimeout(unmatchCards,1500);
+			}
+		} 
 	}
 
-	if (counter == 1) {
-    	firstCard = card;
-	} else if (counter == 2) {
-		secondCard = card;
-		setTimeout (matchCards,1500);
-	} 
+	else { //if the clicked element is not on the grid, exit function
+		return;
+	}
 }
 
 //randomising the classes
@@ -49,30 +60,40 @@ function shuffle(input) {
 	return input;
 }
 shuffle(classes);
+addingClasses();
 
-//verifying if the cards match
+//two matching cards function
 
 function matchCards () {
     counter = 0;
-    if (firstCard == secondCard ) {
-        let turnedCard = document.getElementsByClassName(firstCard);
-    } else {
-        let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
-        let turnedCard2 = document.querySelector("."+secondCard+"-turn");
-		turnedCard1.classList.add(firstCard);
-		turnedCard2.classList.add(secondCard);
-		turnedCard1.classList.remove(firstCard+"-turn");
-		turnedCard2.classList.remove(secondCard+"-turn"); 
+	let turnedCard = document.querySelectorAll('.'+firstCard+'-turn');
+	for (let el of turnedCard) {
+		setTimeout (el.classList.add("matched"), 2000);
     }
 }
 
+//two unmatching cards function
+
+function unmatchCards () {
+	counter = 0;
+    let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
+    let turnedCard2 = document.querySelector("."+secondCard+"-turn");
+	turnedCard1.classList.add(firstCard);
+	turnedCard2.classList.add(secondCard);
+	turnedCard1.classList.remove(firstCard+"-turn");
+	turnedCard2.classList.remove(secondCard+"-turn"); 
+}
+
+
 //adding random classes to the cards
 
-const cards = document.querySelectorAll ('td');
-let i = 0;
-for (let element of cards) {
-	element.classList.add(classes[i]);
-	i++;
+function addingClasses () {
+	const cards = document.querySelectorAll ('td');
+	let i = 0;
+	for (let element of cards) {
+		element.classList.add(classes[i]);
+		i++;
+	}
 }
 
 //adding event listener
