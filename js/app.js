@@ -36,7 +36,7 @@ function turnCard(event) {
 				setTimeout (matchCards,0);
 			}
 			else {
-				setTimeout(unmatchCards,1500);
+				setTimeout(unmatchCards,650);
 			}
 		} 
 	}
@@ -78,9 +78,9 @@ function unmatchCards () {
 	counter = 0;
     let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
     let turnedCard2 = document.querySelector("."+secondCard+"-turn");
-    turnedCard1.classList.add("unmatched");
+    turnedCard1.classList.add("unmatched"); //adding animation for unmatching cards
     turnedCard2.classList.add("unmatched");
-    setTimeout (function (){
+    setTimeout (function (){ 				//returning to the initial mode
 	    turnedCard1.classList.remove("unmatched");
 	    turnedCard2.classList.remove("unmatched");
 		turnedCard1.classList.add(firstCard);
