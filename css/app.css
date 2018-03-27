@@ -26,9 +26,14 @@ h2 {
 }
 
 img {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	float: left;
+}
+
+time {
+	float: right;
+	font-size: 1.5em;
 }
 
 /*grid*/
