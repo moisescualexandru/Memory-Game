@@ -53,120 +53,86 @@ td {
 	background-color: yellow;
 }*/
 
-/*cards initial state*/
+/*cards unturn*/
 
 .one {
-	background-image: none;
+	background-image: url(../img/angry-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .two {
-	background-image: none;
+	background-image: url(../img/in-love-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .three {
-	background-image: none;
+	background-image: url(../img/sad-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .four {
-	background-image: none;
+	background-image: url(../img/smiley-face-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .five {
-	background-image: none;
+	background-image: url(../img/smiley-tongue-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .six {
-	background-image: none;
+	background-image: url(../img/straight-face-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .seven {
-	background-image: none;
+	background-image: url(../img/sun-glases-big.png);
+	transform: rotateY(-180deg);
+	animation: unturn 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .eight {
-	background-image: none;
-}
-
-/*cards unturn*/
-
-.one-unturn {
-	background-image: url(../img/angry-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.two-unturn {
-	background-image: url(../img/in-love-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.three-unturn {
-	background-image: url(../img/sad-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.four-unturn {
-	background-image: url(../img/smiley-face-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.five-unturn {
-	background-image: url(../img/smiley-tongue-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.six-unturn {
-	background-image: url(../img/straight-face-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.seven-unturn {
-	background-image: url(../img/sun-glases-big.png);
-	transform: rotateY(-180deg);
-	animation: unturn 1s;
-	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
-}
-
-.eight-unturn {
 	background-image: url(../img/winking-big.png);
 	transform: rotateY(-180deg);
-	animation: unturn 1s;
+	animation: unturn 0.5s;
 	animation-fill-mode: forwards;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 /*cards turned*/
@@ -175,73 +141,73 @@ td {
 	
 	background-image: url(../img/angry-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .two-turn {
 	background-image: url(../img/in-love-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .three-turn {
 	background-image: url(../img/sad-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .four-turn {
 	background-image: url(../img/smiley-face-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .five-turn {
 	background-image: url(../img/smiley-tongue-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .six-turn {
 	background-image: url(../img/straight-face-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .seven-turn {
 	background-image: url(../img/sun-glases-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .eight-turn {
 	background-image: url(../img/winking-big.png);
 	transform: rotateY(0deg);
-	animation: turn 1s;
-	-webkit-transition: transform 1s ease;
-	-moz-transition: transform 1s ease;
-	transition: transform 1s ease;
+	animation: turn 0.5s;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 /*card turning and unturning animations*/

@@ -12,7 +12,7 @@ function turnCard(event) {
 				valueOfIndex = classes[i];
 				break;
 			}
-		 	else if (card == classes[i]){
+		 	else if (card == classes[i]) {
 				ok=2;
 				break;
 			}
@@ -112,7 +112,11 @@ function removeClasses () {
 function startGame () {
 	shuffle(classes);
 	removeClasses();
-	addingClasses();
+	counter = 0;
+	counterFinish = 0;
+	firstCard = '';
+	secondCard = '';
+	setTimeout (addingClasses,300);
 }
 
 //adding event listener
@@ -123,5 +127,4 @@ const buttons = document.querySelectorAll('button');
 for (let button of buttons) {
 	button.addEventListener('click', startGame);
 }
-let counter = 0, counterFinish = 0;
-let firstCard, secondCard;
+let counter, counterFinish, firstCard, secondCard;
