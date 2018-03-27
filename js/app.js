@@ -5,6 +5,8 @@ function turnCard(event) {
 		let card = event.target.className;
 		let valueOfIndex, ok;
 		counter++;
+		counterFinish++;
+		document.getElementById("number-of-moves").textContent = counterFinish;
 		for (let i = 0; i<classes.length; i++) { //lopp through the classes to see if the card is already turned
 			let intermediar = classes[i]+'-turn';
 			if (intermediar == card) {
@@ -100,6 +102,8 @@ function addingClasses () {
 	}
 }
 
+//reset the grid function
+
 function removeClasses () {
 	const gridCards = document.querySelectorAll ('td');
 	for (let elem of gridCards) {
@@ -114,9 +118,41 @@ function startGame () {
 	removeClasses();
 	counter = 0;
 	counterFinish = 0;
+	document.getElementById("number-of-moves").textContent = counterFinish;
 	firstCard = '';
 	secondCard = '';
 	setTimeout (addingClasses,300);
+	clearInterval(countTimer);
+	timer();
+}
+
+//timer function
+
+function timer() {
+	let minutes = document.querySelector('#minutes');
+	let seconds = document.querySelector('#seconds');
+	timerSeconds = 0;
+	timerMinutes = 0;
+	minutes.textContent = '0'+timerMinutes;
+	seconds.textContent = '0'+timerSeconds;
+	countTimer = setInterval (function () {
+		timerSeconds++;
+		if (timerSeconds < 10) {
+			seconds.textContent = '0'+timerSeconds;
+		} else {
+			seconds.textContent = timerSeconds;
+		}
+		if(timerSeconds == 60) {
+			timerSeconds = 0;
+			timerMinutes++;
+			if (timerMinutes < 10) {
+				minutes.textContent = '0' + timerMinutes;
+				seconds.textContent = '0' +timerSeconds;
+			} else {
+				minutes.textContent = timerMinutes;
+			}
+		}
+	},1000);
 }
 
 //adding event listener
@@ -127,4 +163,4 @@ const buttons = document.querySelectorAll('button');
 for (let button of buttons) {
 	button.addEventListener('click', startGame);
 }
-let counter, counterFinish, firstCard, secondCard;
+let counter, counterFinish, firstCard, secondCard, timerSeconds, timerMinutes, countTimer;
