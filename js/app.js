@@ -5,11 +5,11 @@ function turnCard(event) {
 		let card = event.target.className;
 		let valueOfIndex, ok;
 		counter++;
-		counterFinish++;
-		document.getElementById('number-of-moves').textContent = counterFinish;
-		if (counterFinish > 26 && counterFinish < 36) {
+		movesCounter++;
+		document.getElementById('number-of-moves').textContent = movesCounter;
+		if (movesCounter > 26 && movesCounter < 36) {
 			document.getElementById('third').setAttribute('src', 'img/star-not.png');
-		} else if (counterFinish >= 36) {
+		} else if (movesCounter >= 36) {
 			document.getElementById('second').setAttribute('src', 'img/star-not.png');
 		}
 		for (let i = 0; i<classes.length; i++) { //lopp through the classes to see if the card is already turned
@@ -75,6 +75,12 @@ function matchCards () {
 	for (let el of turnedCard) {
 		setTimeout (el.classList.add('matched'), 2000);
     }
+    counterFinish++;
+    if (counterFinish == 8) {
+    	setTimeout (alert('You finished your game!!'), 1500);
+    	seconds.textContent = timerSeconds;
+    	minutes.textContent = timerMinutes;
+    }
 }
 
 //two unmatching cards function
@@ -129,8 +135,8 @@ function startGame () {
 function resetGrid () {
 	removeClasses();
 	counter = 0;
-	counterFinish = 0;
-	document.getElementById('number-of-moves').textContent = counterFinish;
+	movesCounter = 0;
+	document.getElementById('number-of-moves').textContent = movesCounter;
 	firstCard = '';
 	secondCard = '';
 	let stars = document.querySelectorAll ('img');
@@ -177,4 +183,4 @@ const buttonStart = document.querySelector('#start');
 const buttonReset = document.querySelector('#reset');
 buttonStart.addEventListener('click', startGame);
 buttonReset.addEventListener('click', resetGrid);
-let counter = 0, counterFinish = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer;
+let counter = 0, movesCounter = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer, counterFinish = 0;
