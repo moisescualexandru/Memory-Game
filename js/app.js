@@ -59,8 +59,6 @@ function shuffle(input) {
 	}
 	return input;
 }
-shuffle(classes);
-addingClasses();
 
 //two matching cards function
 
@@ -102,8 +100,28 @@ function addingClasses () {
 	}
 }
 
+function removeClasses () {
+	const gridCards = document.querySelectorAll ('td');
+	for (let elem of gridCards) {
+		elem.removeAttribute('class');
+	}
+}
+
+//start game function
+
+function startGame () {
+	shuffle(classes);
+	removeClasses();
+	addingClasses();
+}
+
 //adding event listener
+
 const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
+const buttons = document.querySelectorAll('button');
+for (let button of buttons) {
+	button.addEventListener('click', startGame);
+}
 let counter = 0, counterFinish = 0;
 let firstCard, secondCard;
