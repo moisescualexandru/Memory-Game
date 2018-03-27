@@ -18,6 +18,7 @@ function turnCard(event) {
 		}
 	}
 	if (ok==1) {
+		counter--;
 		event.target.classList.remove (card);
 		event.target.classList.add (valueOfIndex);
 	}
@@ -31,7 +32,7 @@ function turnCard(event) {
 	} else if (counter == 2) {
 		secondCard = card;
 		setTimeout (matchCards,1500);
-	}
+	} 
 }
 
 //randomising the classes

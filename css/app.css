@@ -43,147 +43,163 @@ td {
 	border-radius: 10px;
 	margin: 20px;
 	background-color: blue;
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+td:hover {
+	background-color: yellow;
 }
 
 /*cards*/
 
 .one {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .two {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .three {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .four {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .five {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .six {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .seven {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .eight {
-	-webkit-transform: rotateY(-180deg);
-	-moz-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
-	transition: transform 1s ease;
 	animation: unturn 1s;
+	background-image: none;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 /*cards turned*/
 
 .one-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+	
 	background-image: url(../img/angry-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .two-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/in-love-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .three-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/sad-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .four-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/smiley-face-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .five-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/smiley-tongue-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .six-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/straight-face-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .seven-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/sun-glases-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 .eight-turn {
-	-webkit-transform: rotateY(0deg);
-	-moz-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
 	background-image: url(../img/winking-big.png);
-	transition: transform 1s ease;
+	transform: rotateY(0deg);
 	animation: turn 1s;
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	transition: transform 1s ease;
 }
 
 /*card turning and unturning animations*/
@@ -206,4 +222,11 @@ td {
 	100% {
 		background-image;
 	}
+}
+
+/*matched cards*/
+
+.matched {
+	background-color: green;
+
 }
