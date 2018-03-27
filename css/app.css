@@ -56,72 +56,87 @@ td {
 /*cards*/
 
 .one {
+	background-image: url(../img/angry-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .two {
+	background-image: url(../img/in-love-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .three {
+	background-image: url(../img/sad-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .four {
+	background-image: url(../img/smiley-face-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .five {
+	background-image: url(../img/smiley-tongue-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .six {
+	background-image: url(../img/straight-face-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .seven {
+	background-image: url(../img/sun-glases-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
+/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
 .eight {
+	background-image: url(../img/winking-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
-	background-image: none;
+	animation-fill-mode: forwards;
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
@@ -254,33 +269,35 @@ td {
 	}
 }
 
+/*unmatched cards*/
+
 .unmatched {
-	animation: unmatch 0.3s 1;
+	animation: unmatch 0.4s 1;
 }
 
 @keyframes unmatch {
 	0%{
 		background-color: red;
-		-moz-transform: skewX(15deg);
-		-webkit-transform: skewX(15deg);
-		transform: skewX(15deg);
+		-moz-transform: skewX(10deg);
+		-webkit-transform: skewX(10deg);
+		transform: skewX(10deg);
 	}
 	25% {
-		-moz-transform: skewX(-15deg);
-		-webkit-transform: skewX(-15deg);
-		transform: skewX(-15deg);
+		-moz-transform: skewX(-10deg);
+		-webkit-transform: skewX(-10deg);
+		transform: skewX(-10deg);
 		background-color: red;
 	}
 	50% {
-		-moz-transform: skewX(15deg);
-		-webkit-transform: skewX(15deg);
-		transform: skewX(15deg);
+		-moz-transform: skewX(10deg);
+		-webkit-transform: skewX(10deg);
+		transform: skewX(10deg);
 		background-color: red;
 	}
 	75% {
-		-moz-transform: skewX(-15deg);
-		-webkit-transform: skewX(-15deg);
-		transform: skewX(-15deg);
+		-moz-transform: skewX(-10deg);
+		-webkit-transform: skewX(-10deg);
+		transform: skewX(-10deg);
 		background-color: red;
 	}
 	100% {
