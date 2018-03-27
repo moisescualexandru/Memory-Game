@@ -6,7 +6,12 @@ function turnCard(event) {
 		let valueOfIndex, ok;
 		counter++;
 		counterFinish++;
-		document.getElementById("number-of-moves").textContent = counterFinish;
+		document.getElementById('number-of-moves').textContent = counterFinish;
+		if (counterFinish > 26 && counterFinish < 36) {
+			document.getElementById('third').setAttribute('src', 'img/star-not.png');
+		} else if (counterFinish >= 36) {
+			document.getElementById('second').setAttribute('src', 'img/star-not.png');
+		}
 		for (let i = 0; i<classes.length; i++) { //lopp through the classes to see if the card is already turned
 			let intermediar = classes[i]+'-turn';
 			if (intermediar == card) {
@@ -68,7 +73,7 @@ function matchCards () {
     counter = 0;
 	let turnedCard = document.querySelectorAll('.'+firstCard+'-turn');
 	for (let el of turnedCard) {
-		setTimeout (el.classList.add("matched"), 2000);
+		setTimeout (el.classList.add('matched'), 2000);
     }
 }
 
@@ -76,17 +81,17 @@ function matchCards () {
 
 function unmatchCards () {
 	counter = 0;
-    let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
-    let turnedCard2 = document.querySelector("."+secondCard+"-turn");
-    turnedCard1.classList.add("unmatched"); //adding animation for unmatching cards
-    turnedCard2.classList.add("unmatched");
+    let turnedCard1 = document.querySelector('.'+firstCard+'-turn'); 
+    let turnedCard2 = document.querySelector('.'+secondCard+'-turn');
+    turnedCard1.classList.add('unmatched'); //adding animation for unmatching cards
+    turnedCard2.classList.add('unmatched');
     setTimeout (function (){ 				//returning to the initial mode
-	    turnedCard1.classList.remove("unmatched");
-	    turnedCard2.classList.remove("unmatched");
+	    turnedCard1.classList.remove('unmatched');
+	    turnedCard2.classList.remove('unmatched');
 		turnedCard1.classList.add(firstCard);
 		turnedCard2.classList.add(secondCard);
-		turnedCard1.classList.remove(firstCard+"-turn");
-		turnedCard2.classList.remove(secondCard+"-turn"); 
+		turnedCard1.classList.remove(firstCard+'-turn');
+		turnedCard2.classList.remove(secondCard+'-turn'); 
 	}, 800);
 }
 
@@ -118,10 +123,14 @@ function startGame () {
 	removeClasses();
 	counter = 0;
 	counterFinish = 0;
-	document.getElementById("number-of-moves").textContent = counterFinish;
+	document.getElementById('number-of-moves').textContent = counterFinish;
 	firstCard = '';
 	secondCard = '';
 	setTimeout (addingClasses,300);
+	let stars = document.querySelectorAll ('img');
+	for (let star of stars) {
+		star.setAttribute ('src', 'img/star.png');
+	}
 	clearInterval(countTimer);
 	timer();
 }
