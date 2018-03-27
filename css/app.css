@@ -228,5 +228,10 @@ td:hover {
 
 .matched {
 	background-color: green;
-
+	-moz-transform: skewX(30deg);
+	-webkit-transform: skewX(30deg);
+	transform: skewX(30deg);
+	-moz-transform: scale(1,0.8);
+	-webkit-transform: scale(1,0.8);
+	transform: scale(1,0.8);
 }
