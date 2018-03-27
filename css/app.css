@@ -49,9 +49,9 @@ td {
 	transition: all 0.2s;
 }
 
-td:hover {
+/*td:hover {
 	background-color: yellow;
-}
+}*/
 
 /*cards*/
 
@@ -227,15 +227,66 @@ td:hover {
 /*matched cards*/
 
 .matched {
-	background-color: green;
-	-moz-transform: skewX(30deg);
-	-webkit-transform: skewX(30deg);
-	transform: skewX(30deg);
-	-moz-transform: scale(0.9,0.9);
-	-webkit-transform: scale(0.9,0.9);
-	transform: scale(0.9,0.9);
-	-moz-transform: scale(1,1);
-	-webkit-transform: scale(1,1);
-	transform: scale(1,1);
-	transition-delay: 2s;
+	animation: matched 0.3s 1;
+	animation-delay: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes matched {
+	0% {
+		background-color: blue;
+	}
+
+	50% {
+		-moz-transform: skewX(30deg);
+		-webkit-transform: skewX(30deg);
+		transform: skewX(30deg);
+		-moz-transform: scale(0.9,0.9);
+		-webkit-transform: scale(0.9,0.9);
+		transform: scale(0.9,0.9);
+	}
+
+	100% {
+		-moz-transform: scale(1,1);
+		-webkit-transform: scale(1,1);
+		transform: scale(1,1);
+		background-color: green;
+	}
+}
+
+.unmatched {
+	animation: unmatch 0.3s 1;
+}
+
+@keyframes unmatch {
+	0%{
+		background-color: red;
+		-moz-transform: skewX(15deg);
+		-webkit-transform: skewX(15deg);
+		transform: skewX(15deg);
+	}
+	25% {
+		-moz-transform: skewX(-15deg);
+		-webkit-transform: skewX(-15deg);
+		transform: skewX(-15deg);
+		background-color: red;
+	}
+	50% {
+		-moz-transform: skewX(15deg);
+		-webkit-transform: skewX(15deg);
+		transform: skewX(15deg);
+		background-color: red;
+	}
+	75% {
+		-moz-transform: skewX(-15deg);
+		-webkit-transform: skewX(-15deg);
+		transform: skewX(-15deg);
+		background-color: red;
+	}
+	100% {
+		-moz-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);		
+		background-color: red;
+	}	
 }

@@ -78,10 +78,16 @@ function unmatchCards () {
 	counter = 0;
     let turnedCard1 = document.querySelector("."+firstCard+"-turn"); 
     let turnedCard2 = document.querySelector("."+secondCard+"-turn");
-	turnedCard1.classList.add(firstCard);
-	turnedCard2.classList.add(secondCard);
-	turnedCard1.classList.remove(firstCard+"-turn");
-	turnedCard2.classList.remove(secondCard+"-turn"); 
+    turnedCard1.classList.add("unmatched");
+    turnedCard2.classList.add("unmatched");
+    setTimeout (function (){
+	    turnedCard1.classList.remove("unmatched");
+	    turnedCard2.classList.remove("unmatched");
+		turnedCard1.classList.add(firstCard);
+		turnedCard2.classList.add(secondCard);
+		turnedCard1.classList.remove(firstCard+"-turn");
+		turnedCard2.classList.remove(secondCard+"-turn"); 
+	}, 800);
 }
 
 
