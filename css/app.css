@@ -53,86 +53,113 @@ td {
 	background-color: yellow;
 }*/
 
-/*cards*/
+/*cards initial state*/
 
 .one {
+	background-image: none;
+}
+
+.two {
+	background-image: none;
+}
+
+.three {
+	background-image: none;
+}
+
+.four {
+	background-image: none;
+}
+
+.five {
+	background-image: none;
+}
+
+.six {
+	background-image: none;
+}
+
+.seven {
+	background-image: none;
+}
+
+.eight {
+	background-image: none;
+}
+
+/*cards unturn*/
+
+.one-unturn {
 	background-image: url(../img/angry-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.two {
+.two-unturn {
 	background-image: url(../img/in-love-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.three {
+.three-unturn {
 	background-image: url(../img/sad-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.four {
+.four-unturn {
 	background-image: url(../img/smiley-face-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.five {
+.five-unturn {
 	background-image: url(../img/smiley-tongue-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.six {
+.six-unturn {
 	background-image: url(../img/straight-face-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.seven {
+.seven-unturn {
 	background-image: url(../img/sun-glases-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
 	animation-fill-mode: forwards;
-/*	background-image: none;*/
 	-webkit-transition: transform 1s ease;
 	-moz-transition: transform 1s ease;
 	transition: transform 1s ease;
 }
 
-.eight {
+.eight-unturn {
 	background-image: url(../img/winking-big.png);
 	transform: rotateY(-180deg);
 	animation: unturn 1s;
