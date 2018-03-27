@@ -120,19 +120,28 @@ function removeClasses () {
 
 function startGame () {
 	shuffle(classes);
+	setTimeout (addingClasses,300);
+	timer();
+}
+
+//reset grid function
+
+function resetGrid () {
 	removeClasses();
 	counter = 0;
 	counterFinish = 0;
 	document.getElementById('number-of-moves').textContent = counterFinish;
 	firstCard = '';
 	secondCard = '';
-	setTimeout (addingClasses,300);
 	let stars = document.querySelectorAll ('img');
 	for (let star of stars) {
 		star.setAttribute ('src', 'img/star.png');
 	}
 	clearInterval(countTimer);
-	timer();
+	timerSeconds = 0;
+	timerMinutes = 0;
+	minutes.textContent = '0'+timerMinutes;
+	seconds.textContent = '0'+timerSeconds;
 }
 
 //timer function
@@ -140,10 +149,6 @@ function startGame () {
 function timer() {
 	let minutes = document.querySelector('#minutes');
 	let seconds = document.querySelector('#seconds');
-	timerSeconds = 0;
-	timerMinutes = 0;
-	minutes.textContent = '0'+timerMinutes;
-	seconds.textContent = '0'+timerSeconds;
 	countTimer = setInterval (function () {
 		timerSeconds++;
 		if (timerSeconds < 10) {
@@ -168,8 +173,8 @@ function timer() {
 
 const table = document.querySelector ('#grid');
 table.addEventListener ('click', turnCard);
-const buttons = document.querySelectorAll('button');
-for (let button of buttons) {
-	button.addEventListener('click', startGame);
-}
-let counter, counterFinish, firstCard, secondCard, timerSeconds, timerMinutes, countTimer;
+const buttonStart = document.querySelector('#start');
+const buttonReset = document.querySelector('#reset');
+buttonStart.addEventListener('click', startGame);
+buttonReset.addEventListener('click', resetGrid);
+let counter = 0, counterFinish = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer;
