@@ -10,11 +10,11 @@ Supported browsers:
 - Opera (teste OK)
 
 Browsers not supported:
--Internet Explorer (tested NOK)
--Microsof Edge (tested NOK)
+- Internet Explorer (tested NOK)
+- Microsof Edge (tested NOK)
 
 Unknown support browser:
--Safari
+- Safari
 
 # Instructions
 
