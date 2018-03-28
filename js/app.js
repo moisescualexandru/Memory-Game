@@ -212,3 +212,16 @@ const buttonReset = document.querySelector('#reset');
 buttonStart.addEventListener('click', startGame);
 buttonReset.addEventListener('click', resetGrid);
 let counter = 0, movesCounter = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer, counterFinish = 0;
+
+//display the pop-up for instructions on playing the game
+const iPopUp = document.getElementById('instructions-pop-up');
+const instructions = document.querySelector ('#instructions');
+instructions.addEventListener('click', function () {
+	iPopUp.style.display = 'block';
+});
+
+window.onclick = function (event) {
+	if (event.target == iPopUp) {
+		iPopUp.style.display = 'none';
+	}
+}
