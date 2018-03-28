@@ -155,6 +155,7 @@ function startGame () {
 	setTimeout (addingClasses,300);
 	timer();
 	table.addEventListener ('click', turnCard);
+	buttonStart.removeEventListener('click',startGame);
 }
 
 //reset button function
@@ -175,6 +176,7 @@ function resetGrid () {
 	timerMinutes = 0;
 	minutes.textContent = '0'+timerMinutes;
 	seconds.textContent = '0'+timerSeconds;
+	buttonStart.addEventListener('click', startGame);
 }
 
 //timer function
