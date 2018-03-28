@@ -7,12 +7,20 @@ function turnCard(event) {
 		counter++;
 		movesCounter++;
 		document.getElementById('number-of-moves').textContent = movesCounter;
-		if (movesCounter > 26 && movesCounter < 36) {
-			document.getElementById('third').setAttribute('src', 'img/star-not.png');
-		} else if (movesCounter >= 36) {
-			document.getElementById('second').setAttribute('src', 'img/star-not.png');
+		//changing the number of stars depending on the performance
+		if (movesCounter >= 30 && movesCounter < 40) {
+			let stars1 = document.querySelectorAll('#third');
+			for (let star1 of stars1) {
+				star1.setAttribute('src', 'img/star-not.png');
+			}
+		} else if (movesCounter >= 40) {
+			let stars2 = document.querySelectorAll('#second');
+			for (let star2 of stars2) {
+			star2.setAttribute('src', 'img/star-not.png');
+			}
 		}
-		for (let i = 0; i<classes.length; i++) { //lopp through the classes to see if the card is already turned
+		//lopp through the classes to see if the card is already turned
+		for (let i = 0; i<classes.length; i++) { 
 			let intermediar = classes[i]+'-turn';
 			if (intermediar == card) {
 				ok=1;
@@ -77,9 +85,27 @@ function matchCards () {
     }
     counterFinish++;
     if (counterFinish == 8) {
-    	setTimeout (alert('You finished your game!!'), 1500);
+    	// display the pop-up window with the game information
     	seconds.textContent = timerSeconds;
     	minutes.textContent = timerMinutes;
+    	clearInterval(countTimer);
+    	let popUp = document.getElementById('finish-pop-up');
+    	setTimeout(function() {
+    		popUp.style.display = 'inline';
+    		document.querySelector('.moves').textContent = movesCounter;
+    		if (seconds.textContent < 10 && minutes.textContent < 10) {
+    			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + '0' + seconds.textContent;
+    		}
+    		else if (seconds.textContent >= 10 && minutes.textContent < 10) {
+    			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + seconds.textContent;
+    		}
+    		else {
+    			document.querySelector('.time').textContent = minutes.textContent + ':' + seconds.textContent;
+    		}
+    	}, 1500);
+    	window.onclick = function (event) {
+    		popUp.style.display = 'none';
+    	}
     }
 }
 
@@ -128,6 +154,7 @@ function startGame () {
 	shuffle(classes);
 	setTimeout (addingClasses,300);
 	timer();
+	table.addEventListener ('click', turnCard);
 }
 
 //reset button function
@@ -155,6 +182,8 @@ function resetGrid () {
 function timer() {
 	let minutes = document.querySelector('#minutes');
 	let seconds = document.querySelector('#seconds');
+	timerSeconds = 0;
+	timerMinutes = 0;
 	countTimer = setInterval (function () {
 		timerSeconds++;
 		if (timerSeconds < 10) {
@@ -178,7 +207,6 @@ function timer() {
 //adding event listener and declaring the global scope variables
 
 const table = document.querySelector ('#grid');
-table.addEventListener ('click', turnCard);
 const buttonStart = document.querySelector('#start');
 const buttonReset = document.querySelector('#reset');
 buttonStart.addEventListener('click', startGame);
