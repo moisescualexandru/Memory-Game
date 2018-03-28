@@ -36,6 +36,10 @@
 		border-spacing: 12px;
 		padding: 12px;
 	}
+
+	.pop-up-content {
+		font-size: 0.8em;
+	}
 }
 
 @media screen and (max-width: 590px) {
@@ -98,6 +102,10 @@
 	#site-header {
 		font-size: 1.2em;
 	}
+
+	.pop-up-content {
+		font-size: 0.6em;
+	}
 }
 
 @media screen and (max-width: 375px) {
@@ -135,6 +143,15 @@
 
 	button {
 		font-size: 0.6em;
+	}
+
+	.pop-up-content {
+		font-size: 0.5em;
+	}
+
+	img {
+		width: 12px;
+		height: 12px;
 	}
 }
 

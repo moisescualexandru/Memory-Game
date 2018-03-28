@@ -100,16 +100,13 @@ td {
 
 .stars, .time-counter, .moves-counter {
 	width: 33%;
+	margin: auto;
 }
 
 .time-counter {
 	text-align: right;
-	font-size: 1em;
 }
 
-.moves-counter {
-	font-size: 1em;
-}
 
 /*cards unturn*/
 
