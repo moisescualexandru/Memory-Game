@@ -95,12 +95,18 @@ function matchCards () {
     		document.querySelector('.moves').textContent = movesCounter;
     		if (seconds.textContent < 10 && minutes.textContent < 10) {
     			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + '0' + seconds.textContent;
+    			seconds.textContent = '0' + timerSeconds;
+    			minutes.textContent = '0' + timerMinutes;
     		}
     		else if (seconds.textContent >= 10 && minutes.textContent < 10) {
     			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + seconds.textContent;
+    			seconds.textContent = timerSeconds;
+    			minutes.textContent = '0' + timerMinutes;
     		}
     		else {
     			document.querySelector('.time').textContent = minutes.textContent + ':' + seconds.textContent;
+    			seconds.textContent = timerSeconds;
+    			minutes.textContent = timerMinutes;
     		}
     	}, 1500);
     	window.onclick = function (event) {
