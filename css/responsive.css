@@ -1,0 +1,140 @@
+@media screen and (max-width: 900px) {
+	td {
+		width: 120px;
+		height: 120px;
+	}
+
+	img {
+		width: 25px;
+		height: 25px;
+	}
+
+	time {
+		font-size: 1.5em;
+	}
+
+	#grid-perf {
+		max-width: 600px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	td {
+		width: 100px;
+		height: 100px;
+	}
+
+	#grid-perf {
+		max-width: 490px;
+	}
+
+	time {
+		font-size: 1.2em;
+	}
+
+	table {
+		border-spacing: 12px;
+		padding: 12px;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	td {
+		width: 80px;
+		height: 80px;
+	}
+
+	table {
+		border-spacing: 10px;
+		padding: 10px;
+	}
+
+	#grid-perf {
+		max-width: 400px;
+	}
+
+	time {
+		font-size: 1em;
+	}
+
+	img {
+		width: 20px;
+		height: 20px;
+	}
+
+	#welcome {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	td {
+		width: 65px;
+		height: 65px;
+	}
+
+	table {
+		border-spacing: 5px;
+		padding: 5px;
+	}
+
+	#grid-perf {
+		max-width: 310px;
+	}
+
+	#welcome {
+		font-size: 0.9em;
+	}
+
+	#moves, time {
+		font-size: 0.8em;
+	}
+
+	img {
+		width: 16px;
+		height: 16px;
+	}
+
+	#site-header {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	td {
+		width: 55px;
+		height: 55px;
+	}
+
+	#grid-perf {
+		max-width: 270px;
+	}
+
+	#welcome {
+		font-size: 0.7em;
+	}
+
+	#site-header {
+		font-size: 1em;
+	}
+
+	footer {
+		font-size: 0.7em;
+	}
+
+	button {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	td {
+		width: 50px;
+		height: 50px;
+	}
+
+	button {
+		font-size: 0.6em;
+	}
+}
+

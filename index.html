@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Memmory Game</title>
 		<link rel="stylesheet" href="css/app.css">
-		<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+		<link rel="stylesheet" href="css/responsive.css">
 	</head>
 
 	<body>
@@ -26,13 +26,13 @@
 						<span><img id="second" src="img/star.png" alt="performance star"></span>
 						<span><img id="third" src="img/star.png" alt="performance star"></span>
 					</div>
-					<div id="moves"><p>Number of moves: <span id="number-of-moves">0</span></p></div>
+					<div id="moves"><p class="number">Moves: <span id="number-of-moves">0</span></p></div>
 					<div id="timer"><time><span id='minutes'>00</span><span>:</span><span id="seconds">00</span></time></div>
 				</div>
 				<div id="finish-pop-up" class="pop-up">
 					<div class="pop-up-content">
 						<h1>Congratulaions!!<h1p>
-						<h2>You have finished the game.</h2>
+						<h3>You have finished the game.</h3>
 						<h3>Here are your results: </h3>
 						<div class="performance-container">
 							<div class="stars">
@@ -41,10 +41,10 @@
 									<span><img id="third" src="img/star.png" alt="performance star"></span>
 							</div>
 							<div class="moves-counter">
-								<h3>Number of moves: <span class="moves"></span></h3>
+								<p>Number of moves: <span class="moves"></span></p>
 							</div>
 							<div class="time-counter">
-								<h3>Time: <span class="time"></span></h3>
+								<p>Time: <span class="time"></span></p>
 							</div>
 						</div>
 					</div>
