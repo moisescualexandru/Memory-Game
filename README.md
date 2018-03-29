@@ -16,6 +16,15 @@ Browsers not supported:
 Unknown support browser:
 - Safari
 
+#Techonologies used
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- [Google Fonts](https://fonts.google.com/)
+- [Icons made by STLMOTHERHOOD](https://stlmotherhood.com/make-your-own-memory-game-free-printable/)
+- [Background by Misucell](http://www.misucell.com/)
+
 # Instructions
 
 You need to match the cards on the grid by turning them one by one. A match will be completed if you find the same card on the second turn. Otherwise the 2 cards will unturn.

@@ -115,6 +115,11 @@ function matchCards () {
     			minutes.textContent = timerMinutes;
     		}
     		flag = false;
+    		restartGame.addEventListener('click', function() {
+    			popUp.style.display = 'none';
+    			resetGrid();
+    			startGame();
+			});
     	}, 400);
     	window.onclick = function (event) { //close the pop-up if you click anywhere else
     		popUp.style.display = 'none';
@@ -194,8 +199,6 @@ function resetGrid () {
 
 //timer function
 function timer() {
-	let minutes = document.querySelector('#minutes');
-	let seconds = document.querySelector('#seconds');
 	timerSeconds = 0;
 	timerMinutes = 0;
 	countTimer = setInterval (function () {
@@ -223,8 +226,11 @@ const table = document.querySelector ('#grid');
 const buttonStart = document.querySelector('#start');
 const buttonReset = document.querySelector('#reset');
 const gridCards = document.querySelectorAll ('td');
+const restartGame = document.getElementById('restart-game');
 buttonStart.addEventListener('click', startGame);
 buttonReset.addEventListener('click', resetGrid);
+let minutes = document.querySelector('#minutes');
+let seconds = document.querySelector('#seconds');
 let flag = false, counter = 0, movesCounter = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer, counterFinish = 0;
 
 //display the pop-up for instructions on playing the game
@@ -233,8 +239,8 @@ const instructions = document.querySelector ('#instructions');
 instructions.addEventListener('click', function () {
 	iPopUp.style.display = 'block';
 	window.onclick = function (event) {
-	if (event.target == iPopUp) {
-		iPopUp.style.display = 'none';
+		if (event.target == iPopUp) {
+			iPopUp.style.display = 'none';
+		}
 	}
-}
 });
