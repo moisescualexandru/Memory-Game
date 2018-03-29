@@ -242,10 +242,9 @@ const iPopUp = document.getElementById('instructions-pop-up');
 const instructions = document.querySelector ('#instructions');
 instructions.addEventListener('click', function () {
 	iPopUp.style.display = 'block';
-});
-
-window.onclick = function (event) {
+	window.onclick = function (event) {
 	if (event.target == iPopUp) {
 		iPopUp.style.display = 'none';
 	}
 }
+});
