@@ -1,68 +1,84 @@
 // selecting and turning the card
-
 function turnCard(event) {
-	if (event.target.tagName == 'TD') { //check if the event is a grid element
-		let card = event.target.className;
-		let valueOfIndex, ok;
-		counter++;
-		movesCounter++;
-		document.getElementById('number-of-moves').textContent = movesCounter;
-		//changing the number of stars depending on the performance
-		if (movesCounter >= 30 && movesCounter < 40) {
-			let stars1 = document.querySelectorAll('#third');
-			for (let star1 of stars1) {
-				star1.setAttribute('src', 'img/star-not.png');
-			}
-		} else if (movesCounter >= 40) {
-			let stars2 = document.querySelectorAll('#second');
-			for (let star2 of stars2) {
-			star2.setAttribute('src', 'img/star-not.png');
-			}
-		}
-		//lopp through the classes to see if the card is already turned
-		for (let i = 0; i<classes.length; i++) { 
-			let intermediar = classes[i]+'-turn';
-			if (intermediar == card) {
-				ok=1;
-				valueOfIndex = classes[i];
-				break;
-			}
-		 	else if (card == classes[i]) {
-				ok=2;
-				break;
-			}
-		}
-		if (ok==1) {	// if the first card was already turned and clicked again, it unterns it and resets the counter
-			counter=0;
-			event.target.classList.remove (card);
-			event.target.classList.add (valueOfIndex);
-			return;
-		}
-		else if (ok==2) { //if the card was not turned, it turns the card
-			event.target.classList.remove (card);
-			event.target.classList.add (card+'-turn');
-		}
-
-		if (counter == 1) { //if only one card is turned, getting the className for the matching function
-	    	firstCard = card;
-		} else if (counter == 2) { //two cards turned, checking if they match and calling the functions
-			secondCard = card;
-			if (firstCard == secondCard) {
-				setTimeout (matchCards,0);
+	if (flag == false){ //added a flag so that you cannot click the card while animation is playing
+	flag = true;
+		if (counter < 3) { //don't allow user to turn 3 cards at once
+			if (event.target.tagName == 'TD') { //check if the event is a grid element
+				let card = event.target.className;
+				if (event.target.classList.contains('matched')) { //check if the card is already matched
+					flag = false;
+				}
+				else { //if the card is not matched already, start the function
+					let valueOfIndex, ok;
+					counter++;
+					movesCounter++;
+					document.getElementById('number-of-moves').textContent = movesCounter;
+					//changing the number of stars depending on the performance
+					if (movesCounter >= 30 && movesCounter < 40) {
+						let stars1 = document.querySelectorAll('#third');
+						for (let star1 of stars1) {
+							star1.setAttribute('src', 'img/star-not.png');
+						}
+					} else if (movesCounter >= 40) {
+						let stars2 = document.querySelectorAll('#second');
+						for (let star2 of stars2) {
+						star2.setAttribute('src', 'img/star-not.png');
+						}
+					}
+					//lopp through the classes to see if the card is already turned
+					for (let i = 0; i<classes.length; i++) { 
+						let intermediar = classes[i]+'-turn';
+						if (intermediar == card) {
+							ok=1;
+							valueOfIndex = classes[i];
+							break;
+						}
+					 	else if (card == classes[i]) {
+							ok=2;
+							break;
+						}
+					}
+					if (ok == 1 && counter == 2) {	// if the first card was already turned and clicked again, it unterns it and resets the counter
+						counter=0;
+						event.target.classList.remove (card);
+						event.target.classList.add (valueOfIndex);
+						flag=false;
+						return;
+					} 
+					else if (ok==2 && counter==1) { //if the card was not turned, it turns the card
+						firstCard = card;  
+						event.target.classList.remove (card);
+						event.target.classList.add (card+'-turn');
+						flag = false;
+					}
+					else if (ok==2 && counter==2) { //turns the second card
+						secondCard = card;
+						event.target.classList.remove (card);
+						event.target.classList.add (card+'-turn');
+						event.target.removeEventListener('click',turnCard);
+						if (firstCard == secondCard) {
+							setTimeout (matchCards,0);
+						}
+						else {
+							setTimeout(unmatchCards,300);
+						}
+					}
+				}
 			}
 			else {
-				setTimeout(unmatchCards,650);
-			}
-		} 
-	}
-
-	else { //if the clicked element is not on the grid, exit function
-		return;
+				flag = false; //if the clicked element is not on the grid, exit function
+				return;
+			} 
+		}
+		else { //if the counter is more than 3 it should reset the initial state
+			counter = 0;
+			flag=false;
+			return;
+		}
 	}
 }
 
 //randomising the classes
-
 let classes = ['one', 'two', 'three', 'four','five', 'six', 'seven', 'eight','one', 'two', 'three', 'four','five', 'six', 'seven', 'eight'];
 
 function shuffle(input) {
@@ -76,16 +92,15 @@ function shuffle(input) {
 }
 
 //two matching cards function
-
 function matchCards () {
     counter = 0;
 	let turnedCard = document.querySelectorAll('.'+firstCard+'-turn');
-	for (let el of turnedCard) {
-		setTimeout (el.classList.add('matched'), 2000);
+	for (let el of turnedCard) { //adding the match class to the cards
+		el.classList.add('matched');
     }
     counterFinish++;
     if (counterFinish == 8) {
-    	// display the pop-up window with the game information
+    	// display the pop-up window with the game performance information
     	seconds.textContent = timerSeconds;
     	minutes.textContent = timerMinutes;
     	clearInterval(countTimer);
@@ -108,19 +123,24 @@ function matchCards () {
     			seconds.textContent = timerSeconds;
     			minutes.textContent = timerMinutes;
     		}
-    	}, 1500);
-    	window.onclick = function (event) {
+    		flag = false;
+    	}, 400);
+    	window.onclick = function (event) { //close the pop-up if you click anywhere else
     		popUp.style.display = 'none';
     	}
+    }
+    else {
+    	flag = false;
     }
 }
 
 //two unmatching cards function
-
 function unmatchCards () {
 	counter = 0;
     let turnedCard1 = document.querySelector('.'+firstCard+'-turn'); 
     let turnedCard2 = document.querySelector('.'+secondCard+'-turn');
+    turnedCard1.setAttribute('pointer-events', 'none');
+    turnedCard2.setAttribute('pointer-events','none');
     turnedCard1.classList.add('unmatched'); //adding animation for unmatching cards
     turnedCard2.classList.add('unmatched');
     setTimeout (function (){ 				//returning to the initial mode
@@ -130,12 +150,12 @@ function unmatchCards () {
 		turnedCard2.classList.add(secondCard);
 		turnedCard1.classList.remove(firstCard+'-turn');
 		turnedCard2.classList.remove(secondCard+'-turn'); 
-	}, 800);
+		flag = false;
+	}, 400);
 }
 
 
 //adding random classes to the cards
-
 function addingClasses () {
 	const cards = document.querySelectorAll ('td');
 	let i = 0;
@@ -146,16 +166,13 @@ function addingClasses () {
 }
 
 //reset the grid function
-
 function removeClasses () {
-	const gridCards = document.querySelectorAll ('td');
 	for (let elem of gridCards) {
 		elem.removeAttribute('class');
 	}
 }
 
 //start game function
-
 function startGame () {
 	shuffle(classes);
 	setTimeout (addingClasses,300);
@@ -165,7 +182,6 @@ function startGame () {
 }
 
 //reset button function
-
 function resetGrid () {
 	removeClasses();
 	counter = 0;
@@ -182,11 +198,11 @@ function resetGrid () {
 	timerMinutes = 0;
 	minutes.textContent = '0'+timerMinutes;
 	seconds.textContent = '0'+timerSeconds;
+	table.removeEventListener ('click', turnCard);
 	buttonStart.addEventListener('click', startGame);
 }
 
 //timer function
-
 function timer() {
 	let minutes = document.querySelector('#minutes');
 	let seconds = document.querySelector('#seconds');
@@ -213,13 +229,13 @@ function timer() {
 }
 
 //adding event listener and declaring the global scope variables
-
 const table = document.querySelector ('#grid');
 const buttonStart = document.querySelector('#start');
 const buttonReset = document.querySelector('#reset');
+const gridCards = document.querySelectorAll ('td');
 buttonStart.addEventListener('click', startGame);
 buttonReset.addEventListener('click', resetGrid);
-let counter = 0, movesCounter = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer, counterFinish = 0;
+let flag = false, counter = 0, movesCounter = 0, firstCard, secondCard, timerSeconds, timerMinutes, countTimer, counterFinish = 0;
 
 //display the pop-up for instructions on playing the game
 const iPopUp = document.getElementById('instructions-pop-up');
