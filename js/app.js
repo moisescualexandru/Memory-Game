@@ -14,12 +14,12 @@ function turnCard(event) {
 					movesCounter++;
 					document.getElementById('number-of-moves').textContent = movesCounter;
 					//changing the number of stars depending on the performance
-					if (movesCounter >= 30 && movesCounter < 40) {
+					if (movesCounter > 34 && movesCounter < 45) {
 						let stars1 = document.querySelectorAll('#third');
 						for (let star1 of stars1) {
 							star1.setAttribute('src', 'img/star-not.png');
 						}
-					} else if (movesCounter >= 40) {
+					} else if (movesCounter >= 45) {
 						let stars2 = document.querySelectorAll('#second');
 						for (let star2 of stars2) {
 						star2.setAttribute('src', 'img/star-not.png');

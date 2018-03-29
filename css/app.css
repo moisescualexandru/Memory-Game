@@ -7,6 +7,8 @@ body {
 	margin: auto;
 	background-image: url(../img/background-big.jpg);
 	background-size: 100vw 100vh;
+	font-family: 'Muli', sans-sherif;
+	color: white;
 }
 
 /*header style*/
@@ -34,6 +36,7 @@ button {
 	height: 3em;
 	border-radius: 20px;
 	border: 1px solid gold;
+	background-color: rgb(239,197,235);
 }
 
 button:hover {
@@ -49,7 +52,7 @@ button:hover {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	color: gold;
+	/*color: gold;*/
 }
 
 #stars, #moves, #timer {
@@ -123,6 +126,7 @@ td {
 }
 
 .pop-up-content {
+	color: black;
 	background-color: rgb(254,254,254);
 	margin: auto;
 	padding: 20px;
@@ -177,6 +181,7 @@ td {
 }
 
 .i-pop-up-content {
+	color: black;
 	background-color: rgb(254,254,254);
 	margin: auto;
 	padding: 20px;
