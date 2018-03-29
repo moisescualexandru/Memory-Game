@@ -7,8 +7,7 @@ function turnCard(event) {
 				let card = event.target.className;
 				if (event.target.classList.contains('matched')) { //check if the card is already matched
 					flag = false;
-				}
-				else { //if the card is not matched already, start the function
+				} else { //if the card is not matched already, start the function
 					let valueOfIndex, ok;
 					counter++;
 					movesCounter++;
@@ -32,8 +31,7 @@ function turnCard(event) {
 							ok=1;
 							valueOfIndex = classes[i];
 							break;
-						}
-					 	else if (card == classes[i]) {
+						} else if (card == classes[i]) {
 							ok=2;
 							break;
 						}
@@ -44,33 +42,28 @@ function turnCard(event) {
 						event.target.classList.add (valueOfIndex);
 						flag=false;
 						return;
-					} 
-					else if (ok==2 && counter==1) { //if the card was not turned, it turns the card
+					} else if (ok==2 && counter==1) { //if the card was not turned, it turns the card
 						firstCard = card;  
 						event.target.classList.remove (card);
 						event.target.classList.add (card+'-turn');
 						flag = false;
-					}
-					else if (ok==2 && counter==2) { //turns the second card
+					} else if (ok==2 && counter==2) { //turns the second card
 						secondCard = card;
 						event.target.classList.remove (card);
 						event.target.classList.add (card+'-turn');
 						event.target.removeEventListener('click',turnCard);
 						if (firstCard == secondCard) {
 							setTimeout (matchCards,0);
-						}
-						else {
+						} else {
 							setTimeout(unmatchCards,500);
 						}
 					}
 				}
-			}
-			else {
+			} else {
 				flag = false; //if the clicked element is not on the grid, exit function
 				return;
 			} 
-		}
-		else { //if the counter is more than 3 it should reset the initial state
+		} else { //if the counter is more than 3 it should reset the initial state
 			counter = 0;
 			flag=false;
 			return;
@@ -112,13 +105,11 @@ function matchCards () {
     			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + '0' + seconds.textContent;
     			seconds.textContent = '0' + timerSeconds;
     			minutes.textContent = '0' + timerMinutes;
-    		}
-    		else if (seconds.textContent >= 10 && minutes.textContent < 10) {
+    		} else if (seconds.textContent >= 10 && minutes.textContent < 10) {
     			document.querySelector('.time').textContent = '0' + minutes.textContent + ':' + seconds.textContent;
     			seconds.textContent = timerSeconds;
     			minutes.textContent = '0' + timerMinutes;
-    		}
-    		else {
+    		} else {
     			document.querySelector('.time').textContent = minutes.textContent + ':' + seconds.textContent;
     			seconds.textContent = timerSeconds;
     			minutes.textContent = timerMinutes;
@@ -128,8 +119,7 @@ function matchCards () {
     	window.onclick = function (event) { //close the pop-up if you click anywhere else
     		popUp.style.display = 'none';
     	}
-    }
-    else {
+    } else {
     	flag = false;
     }
 }
