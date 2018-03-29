@@ -16,7 +16,7 @@ Browsers not supported:
 Unknown support browser:
 - Safari
 
-#Techonologies used
+# Techonologies used
 
 - HTML5
 - CSS3
