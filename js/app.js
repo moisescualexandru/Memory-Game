@@ -60,7 +60,7 @@ function turnCard(event) {
 							setTimeout (matchCards,0);
 						}
 						else {
-							setTimeout(unmatchCards,300);
+							setTimeout(unmatchCards,500);
 						}
 					}
 				}
@@ -151,7 +151,7 @@ function unmatchCards () {
 		turnedCard1.classList.remove(firstCard+'-turn');
 		turnedCard2.classList.remove(secondCard+'-turn'); 
 		flag = false;
-	}, 400);
+	}, 500);
 }
 
 
