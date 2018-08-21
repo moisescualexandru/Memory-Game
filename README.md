@@ -2,6 +2,13 @@
 
 This is a simple web aplication for a card memory game
 
+# Installation
+
+In order to run this game:
+- clone the project in your computer
+- cd into the cloned folder
+- run the index.html file in your favorite browser
+
 # Browser support
 
 Supported browsers:
